@@ -1,4 +1,8 @@
+import datetime
+
 from django.db import models
+from django.utils import timezone
+
 
 class Graph(models.Model):
     name = models.CharField(max_length=200)
@@ -7,6 +11,8 @@ class Graph(models.Model):
     def __unicode__(self):
         return self.name
 
+    def recent(self):
+        return self.time >= timezone.now() - datetime.timedelta(days=1)
 
 class Point(models.Model):
     graph = models.ForeignKey(Graph)
