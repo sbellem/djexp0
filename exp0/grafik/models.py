@@ -6,7 +6,7 @@ from django.utils import timezone
 
 class Graph(models.Model):
     name = models.CharField(max_length=200)
-    time = models.DateTimeField('time')
+    time = models.DateTimeField('publication date')
 
     def __unicode__(self):
         return self.name
