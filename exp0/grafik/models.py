@@ -14,6 +14,11 @@ class Graph(models.Model):
     def recent(self):
         return self.time >= timezone.now() - datetime.timedelta(days=1)
 
+    recent.admin_order_field = 'time'
+    recent.boolean = True
+    recent.short_description = 'New?'
+
+
 class Point(models.Model):
     graph = models.ForeignKey(Graph)
     x = models.DecimalField(max_digits=9, decimal_places=4)
