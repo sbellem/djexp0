@@ -106,9 +106,7 @@ ROOT_URLCONF = 'exp0.urls'
 WSGI_APPLICATION = 'exp0.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    '/Users/sbellem/mathematics/django/djexp0/exp0/grafik/templates'
 )
 
 INSTALLED_APPS = (
